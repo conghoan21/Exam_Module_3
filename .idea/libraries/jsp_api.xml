@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="jsp-api">
+    <CLASSES>
+      <root url="jar://D:/JDBC/jsp-api.jar!/" />
+      <root url="jar://D:/JDBC/mysql-connector-java-8.0.17.jar!/" />
+      <root url="jar://D:/JDBC/jstl-api-1.2.jar!/" />
+      <root url="jar://D:/JDBC/jstl-impl-1.2.jar!/" />
+      <root url="jar://D:/JDBC/servlet-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
