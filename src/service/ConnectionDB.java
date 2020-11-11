@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectionDB {
     private static String jdbcURL = "jdbc:mysql://localhost:3306/product_management?serverTimezone=UTC";
     private static String jdbcUsername = "root";
-    private static String jdbcPassword = "123456";
+    private static String jdbcPassword = "Hoanpro9xxxx";
 
     public static Connection getConnect(){
         Connection connection=null;

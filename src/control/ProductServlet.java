@@ -59,20 +59,20 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void createNewProduct(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        IProductService productDAO = new ProductService();
+        IProductService productService = new ProductService();
         String productName = request.getParameter("productName");
         int price = Integer.parseInt(request.getParameter("price"));
         int amount = Integer.parseInt(request.getParameter("amount"));
         String color = request.getParameter("color");
         String description = request.getParameter("description");
         int categoryID = Integer.parseInt(request.getParameter("categoryID"));
-        productDAO.addNewProduct(productName,price,color,description,categoryID,amount);
+        productService.addNewProduct(productName,price,color,description,categoryID,amount);
         response.sendRedirect("/product");
     }
 
     private void displayAllProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        IProductService productDAO = new ProductService();
-        request.setAttribute("list",productDAO.getAllProduct());
+        IProductService productService = new ProductService();
+        request.setAttribute("list",productService.getAllProduct());
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("list.jsp");
         requestDispatcher.forward(request,response);
     }
