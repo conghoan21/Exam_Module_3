@@ -51,9 +51,9 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void getEditProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        IProductService productDAO = new ProductService();
+        IProductService productService = new ProductService();
         int productID = Integer.parseInt(request.getParameter("productID"));
-        request.setAttribute("product",productDAO.getProductByID(productID));
+        request.setAttribute("product",productService.getProductByID(productID));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/category");
         requestDispatcher.forward(request,response);
     }
@@ -73,7 +73,7 @@ public class ProductServlet extends HttpServlet {
     private void displayAllProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         IProductService productDAO = new ProductService();
         request.setAttribute("list",productDAO.getAllProduct());
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/DisplayProduct.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("list.jsp");
         requestDispatcher.forward(request,response);
     }
 }

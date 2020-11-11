@@ -33,8 +33,8 @@
                 <td>${product.getColor}</td>
                 <td>${product.getCategory}</td>
                 <td>
-                    <a href="/list?action=delete&&id=${product.getpId}"><button type="button" value="delete"></button></a>
-                    <a href="/list?action=edit&&id=${product.getpId}"><button type="button" value="edit"></button></a>
+                    <a href="/list?action=delete&&id=${product.getProductId}"><button type="button" value="delete"></button></a>
+                    <a href="/list?action=edit&&id=${product.getProductId}"><button type="button" value="edit"></button></a>
                 </td>
             </tr>
         </c:forEach>

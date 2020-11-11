@@ -16,8 +16,8 @@ public class CategoryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         RequestDispatcher requestDispatcher;
-        ICategoryService categoryDAO = new CategoryService();
-        request.setAttribute("list",categoryDAO.getAllCategory());
+        ICategoryService categoryService = new CategoryService();
+        request.setAttribute("list",categoryService.getAllCategory());
         if(action==null){
             action="";
         }
