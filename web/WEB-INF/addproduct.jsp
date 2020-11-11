@@ -25,7 +25,7 @@
     <label > Category</label>
     <select name="category">
         <c:forEach items="${listCategory}" var="category">
-            <option value="${category.getcName}">${category.getcName}</option>
+            <option value="${category.getCategoryName}">${category.getCategoryName}</option>
         </c:forEach>
     </select>
     <form>
