@@ -15,7 +15,7 @@
 <form method="post">
     <h1>Add new product</h1>
     <label>Name</label>
-    <input type="text" name = 'name'>
+    <input type="text" name = 'productName'>
     <label>Price</label>
     <input type="text" name = "price">
     <label>Quantity</label>
@@ -24,7 +24,7 @@
     <input type="text" name = "description">
     <label > Category</label>
     <select name="category">
-        <c:forEach items="${listCategory}" var="category">
+        <c:forEach items="${listCategory}" var="categoryID">
             <option value="${category.getcName}">${category.getcName}</option>
         </c:forEach>
     </select>

@@ -19,17 +19,17 @@
             <th>#</th>
             <th>Product Name</th>
             <th>Price</th>
-            <th>Quantity</th>
+            <th>Amount</th>
             <th>Color</th>
             <th>Category</th>
             <th>Action</th>
         </tr>
         <c:forEach items="${listProduct}" var="product">
             <tr>
-                <td>${product.getpId}</td>
-                <td>${product.getpName}</td>
+                <td>${product.getProductId}</td>
+                <td>${product.getProductName}</td>
                 <td>${product.getPrice}</td>
-                <td>${product.getQuantity}</td>
+                <td>${product.getAmount}</td>
                 <td>${product.getColor}</td>
                 <td>${product.getCategory}</td>
                 <td>
