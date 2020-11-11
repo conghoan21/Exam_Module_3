@@ -24,7 +24,7 @@
             <th>Category</th>
             <th>Action</th>
         </tr>
-        <c:forEach items="${listProduct}" var="product">
+        <c:forEach items="${list}" var="product">
             <tr>
                 <td>${product.getProductId}</td>
                 <td>${product.getProductName}</td>

@@ -24,7 +24,7 @@
     <input type="text" name = "description">
     <label > Category</label>
     <select name="category">
-        <c:forEach items="${listCategory}" var="category">
+        <c:forEach items="${list}" var="category">
             <option value="${category.getCategoryName}">${category.getCategoryName}</option>
         </c:forEach>
     </select>
