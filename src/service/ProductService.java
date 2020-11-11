@@ -44,8 +44,8 @@ public class ProductService implements IProductService {
                 String color = rs.getString("color");
                 String description = rs.getString("description");
                 int categoryID = rs.getInt("categoryID");
-                ICategoryService categoryDAO = new CategoryService();
-                Category category = categoryDAO.getCategoryByID(categoryID);
+                ICategoryService categoryService = new CategoryService();
+                Category category = categoryService.getCategoryByID(categoryID);
                 Product product = new Product(productID, productName, price, amount, color, description, category);
                 productList.add(product);
             }
@@ -80,8 +80,8 @@ public class ProductService implements IProductService {
                 String color = rs.getString("color");
                 String description = rs.getString("description");
                 int categoryID = rs.getInt("categoryID");
-                ICategoryService categoryDAO = new CategoryService();
-                Category category = categoryDAO.getCategoryByID(categoryID);
+                ICategoryService categoryService = new CategoryService();
+                Category category = categoryService.getCategoryByID(categoryID);
                 product = new Product(productID, productName, price, amount, color, description, category);
             }
         } catch (SQLException exception) {
