@@ -23,10 +23,10 @@ public class CategoryServlet extends HttpServlet {
         }
         switch (action){
             case "editProduct":
-                requestDispatcher = request.getRequestDispatcher("view/EditProductForm.jsp");
+                requestDispatcher = request.getRequestDispatcher("EditProductFor.jsp");
                 break;
             default:
-                requestDispatcher = request.getRequestDispatcher("view/CreateProductForm.jsp");
+                requestDispatcher = request.getRequestDispatcher("addproduct.jsp");
                 break;
         }
         requestDispatcher.forward(request,response);
